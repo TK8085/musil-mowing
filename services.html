@@ -25,7 +25,7 @@
             margin: 1rem 0;
             position: relative;
             z-index: 1;
-            transition: all 2s ease; /* Smooth expansion */
+            transition: all 2s ease;
         }
 
         /* Dropdown panel styling */
@@ -37,12 +37,14 @@
             background: var(--primary);
             box-shadow: var(--shadow);
             border-radius: 10px;
-            margin-top: 1rem; /* Spacing outside the card */
-            padding: 0 1rem;  /* Provide padding inside the details card */
+            margin-top: 1rem;
+            padding: 0 1rem;
+            width: 35%; /* Ensure the dropdown content matches the card's width */
+            box-sizing: border-box; /* Avoid overflow issues */
         }
 
         .show-content {
-            max-height: 1000px; /* Adjust as necessary depending on content height */
+            max-height: 1000px;
             padding: 1rem;
         }
 
@@ -155,7 +157,8 @@
             <div class="service-card">
                 <i class="fa-brands fa-pagelines"></i>
                 <h2>Lawn Care</h2>
-                <p>Comprehensive lawn care services including mowing, trimming, and fertilization to keep your lawn healthy and vibrant throughout the seasons.</p>
+                <p>Comprehensive lawn care services including mowing, trimming, and fertilization to keep your lawn
+                    healthy and vibrant throughout the seasons.</p>
 
                 <label class="toggle-btn" onclick="toggleDropdown('lawn-care-service');">Details</label>
             </div>
@@ -173,13 +176,15 @@
             <div class="service-card">
                 <i class="fa-solid fa-tree"></i>
                 <h2>Landscape Design</h2>
-                <p>Custom landscape design services tailored to your home or business, enhancing curb appeal with beautiful plant arrangements and outdoor features.</p>
+                <p>Custom landscape design services tailored to your home or business, enhancing curb appeal with
+                    beautiful plant arrangements and outdoor features.</p>
 
                 <label class="toggle-btn" onclick="toggleDropdown('landscape-design-dropdown');">Details</label>
             </div>
             <div id="landscape-design-dropdown" class="dropdown-content hide-content">
                 <h3>Landscape Design</h3>
-                <p>Enhance your property with professional landscape design. From planning to implementation, we bring your vision to life.</p>
+                <p>Enhance your property with professional landscape design. From planning to implementation, we bring
+                    your vision to life.</p>
                 <div class="pricing">Pricing: Custom quotes starting at $150</div>
                 <div class="availability">Availability: Monday to Friday, 9 AM - 5 PM</div>
                 <div class="rating">Rating: ★★★★☆ (4.8/5)</div>
