@@ -26,6 +26,7 @@
             position: relative;
             z-index: 1;
             transition: all 2s ease;
+            /* Smooth expansion */
         }
 
         /* Dropdown panel styling */
@@ -38,13 +39,14 @@
             box-shadow: var(--shadow);
             border-radius: 10px;
             margin-top: 1rem;
+            /* Spacing outside the card */
             padding: 0 1rem;
-            width: 35%; /* Ensure the dropdown content matches the card's width */
-            box-sizing: border-box; /* Avoid overflow issues */
+            /* Provide padding inside the details card */
         }
 
         .show-content {
             max-height: 1000px;
+            /* Adjust as necessary depending on content height */
             padding: 1rem;
         }
 
@@ -102,9 +104,8 @@
                 padding: 1rem;
             }
 
-            .dropdown-content {
-                max-height: 1000px;
-            }
+            
+            
         }
     </style>
 
@@ -168,7 +169,7 @@
                 <div class="pricing">Pricing: Starting at $40/hour</div>
                 <div class="availability">Availability: Monday to Saturday, 8 AM - 6 PM</div>
                 <div class="rating">Rating: ★★★★☆ (4.5/5)</div>
-                <a class="book-btn" href="your-booking-link.html">Book Now</a>
+                <a class="book-btn" href="book_now.html">Book Now</a>
                 <a class="contact-btn" href="contacts.html">Contact Us</a>
             </div>
 
@@ -188,7 +189,7 @@
                 <div class="pricing">Pricing: Custom quotes starting at $150</div>
                 <div class="availability">Availability: Monday to Friday, 9 AM - 5 PM</div>
                 <div class="rating">Rating: ★★★★☆ (4.8/5)</div>
-                <a class="book-btn" href="your-booking-link.html">Book Now</a>
+                <a class="book-btn" href="book_now.html">Book Now</a>
                 <a class="contact-btn" href="contacts.html">Contact Us</a>
             </div>
         </section>
