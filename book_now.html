@@ -119,6 +119,23 @@
             <a href="index.html">Back to Home</a>
         </div>
     </div>
+
+    <script>
+        // Function to get URL parameters
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the service from the URL
+        const service = getQueryParameter('service');
+
+        // Set the selected service in the dropdown
+        if (service) {
+            const serviceSelect = document.getElementById('service');
+            serviceSelect.value = service;
+        }
+    </script>
 </body>
 
 </html>

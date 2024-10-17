@@ -15,7 +15,7 @@
             --primary: #dddddd;
             --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
+    
         /* Main card styling */
         .service-card {
             background: var(--light);
@@ -28,11 +28,15 @@
             transition: all 2s ease;
             /* Smooth expansion */
             width: 80%; /* Adjust this value to control the width */
-    max-width: 1000px; /* Add a max-width to limit the width on larger screens */
+            max-width: 1000px; /* Add a max-width to limit the width on larger screens */
         }
-
+    
         /* Dropdown panel styling */
         .dropdown-content {
+            width: 80%; /* Match the width of the service-card */
+            max-width: 1000px; /* Match the max-width of the service-card */
+            margin-left: auto;
+            margin-right: auto;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease, padding 0.5s ease;
@@ -41,22 +45,19 @@
             box-shadow: var(--shadow);
             border-radius: 10px;
             margin-top: 1rem;
-            /* Spacing outside the card */
             padding: 0 1rem;
-            /* Provide padding inside the details card */
         }
-
+    
         .show-content {
             max-height: 1000px;
-            /* Adjust as necessary depending on content height */
             padding: 1rem;
         }
-
+    
         .hide-content {
             max-height: 0;
             padding: 0;
         }
-
+    
         label.toggle-btn {
             background-color: var(--dark);
             color: var(--light);
@@ -66,19 +67,19 @@
             display: inline-block;
             margin-top: 10px;
         }
-
+    
         label.toggle-btn:hover {
             background-color: var(--light);
             color: var(--dark);
         }
-
+    
         .pricing,
         .availability,
         .rating {
             color: rgb(0, 0, 0);
             margin-top: 10px;
         }
-
+    
         .book-btn,
         .contact-btn {
             background-color: var(--dark);
@@ -93,23 +94,20 @@
             border-radius: 5px;
             margin-right: 10px;
         }
-
+    
         .book-btn:hover,
         .contact-btn:hover {
             background-color: var(--light);
             color: var(--dark);
         }
-
+    
         @media screen and (max-width: 768px) {
             .service-card {
-                
                 padding: 1rem;
             }
-
-            
-            
         }
     </style>
+    
 
     <script>
         function toggleDropdown(dropdownId) {
@@ -171,7 +169,7 @@
                 <div class="pricing">Pricing: Starting at $40/hour</div>
                 <div class="availability">Availability: Monday to Saturday, 8 AM - 6 PM</div>
                 <div class="rating">Rating: ★★★★☆ (4.5/5)</div>
-                <a class="book-btn" href="book_now.html">Book Now</a>
+                <a class="book-btn" href="book_now.html?service=lawn-care">Book Now</a>
                 <a class="contact-btn" href="contacts.html">Contact Us</a>
             </div>
 
@@ -191,7 +189,7 @@
                 <div class="pricing">Pricing: Custom quotes starting at $150</div>
                 <div class="availability">Availability: Monday to Friday, 9 AM - 5 PM</div>
                 <div class="rating">Rating: ★★★★☆ (4.8/5)</div>
-                <a class="book-btn" href="book_now.html">Book Now</a>
+                <a class="book-btn" href="book_now.html?service=landscape-design">Book Now</a>
                 <a class="contact-btn" href="contacts.html">Contact Us</a>
             </div>
         </section>
