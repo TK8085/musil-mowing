@@ -6,6 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Musil Mowing</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        .about-us h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center; /* Centering the heading */
+            color: var(--dark); /* Match your theme's primary color */
+        }
+
+        .about-content {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            padding: 0 20px; /* Side padding for content */
+        }
+
+        .founder-profiles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px; /* Space above the founder profiles */
+        }
+
+        .founder {
+            flex: 1 1 300px;
+            text-align: center;
+            margin: 20px;
+            padding: 20px; /* Added padding for spacing */
+            background-color: #ffffff; /* White background for profiles */
+            border: 1px solid var(--primary); /* Border to match theme */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for profile cards */
+            transition: transform 0.2s; /* Smooth scaling effect */
+        }
+
+        .founder:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        .founder h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: var(--primary);
+        }
+
+        .founder p {
+            font-size: 0.9rem;
+            color: #555; /* Softer text color */
+        }
+
+        .founder-img {
+            width: 80%; /* Fill the width of the card */
+            height: 60%; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-bottom: 15px; /* Space below the image */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .founder-profiles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .founder {
+                margin-bottom: 40px;
+            }
+
+            .founder-img {
+            width: 100%; /* Fill the width of the card */
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-bottom: 15px; /* Space below the image */
+        }
+        }
+    </style>
 </head>
 
 <body>
@@ -30,20 +118,25 @@
             <h1>About Musil Mowing</h1>
             <div class="about-content">
                 <p>
-                    Founded in 2021 by brothers Spencer and Jackson Musil, Musil Mowing is dedicated to providing top-tier lawn care and landscaping services in Springfield, MO. 
-                    What started as a small, local endeavor has quickly grown into a trusted name for homeowners and businesses alike. Spencer and Jackson's shared passion for working outdoors and their commitment to delivering quality have made Musil Mowing a standout choice in the community.
+                    Founded in 2021 by brothers Spencer and Jackson Musil, Musil Mowing is dedicated to providing
+                    top-tier lawn care and landscaping services in Springfield, MO.
+                    What started as a small, local endeavor has quickly grown into a trusted name for homeowners and
+                    businesses alike. Spencer and Jackson's shared passion for working outdoors and their commitment to
+                    delivering quality have made Musil Mowing a standout choice in the community.
                 </p>
 
                 <div class="founder-profiles">
                     <div class="founder">
-                        <img src="images/spencer.jpg" alt="Spencer Musil">
+                        <img src="images/spence.png" alt="Spencer Musil" class="founder-img">
                         <h3>Spencer Musil</h3>
-                        <p>As one of the co-founders, Spencer Musil handles day-to-day operations and ensures that each client gets the personal attention they deserve.</p>
+                        <p>As one of the co-founders, Spencer Musil handles day-to-day operations and ensures that each
+                            client gets the personal attention they deserve.</p>
                     </div>
                     <div class="founder">
-                        <img src="images/jackson.jpg" alt="Jackson Musil">
+                        <img src="images/jack.png" alt="Jackson Musil" class="founder-img">
                         <h3>Jackson Musil</h3>
-                        <p>Jackson brings technical expertise to the team, overseeing landscaping design and service implementation, ensuring every job is done to perfection.</p>
+                        <p>Jackson brings technical expertise to the team, overseeing landscaping design and service
+                            implementation, ensuring every job is done to perfection.</p>
                     </div>
                 </div>
             </div>

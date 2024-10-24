@@ -4,21 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <!-- Font Awesome for icons -->
+    <title>Contact Us</title>
     <script src="https://kit.fontawesome.com/f5851cfa09.js" crossorigin="anonymous"></script>
-    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --light: #f9f9f9;
+            --dark: #333;
+            --primary: #dddddd;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main card styling for contact information */
+        .contact-card {
+            background: var(--light);
+            border: 1px solid var(--dark);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+            width: 80%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-card h2, .contact-card p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid var(--dark);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-form button {
+            background-color: var(--dark);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            nav.main-nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem;
+                
+            }
+
+            .contact-section h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form button {
+                width: 100%;
+                
+            }
+            .contact-form input, 
+        .contact-form textarea {
+            padding: 0.3rem;
+        }
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- Header Section -->
+        <!-- Header -->
         <header class="header">
-            <img src="images/logo2.png" alt="Musil Mowing Logo">
+            <img src="images/logo2.png" alt="Company Logo">
         </header>
-
-        <!-- Navigation Menu -->
+        
+        <!-- Navigation -->
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -28,37 +119,40 @@
             </ul>
         </nav>
 
-        <!-- Google Map Embed -->
-        <div class="map-container">
-            <iframe class="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203450.00790679807!2d-93.60814979054332!3d37.178695943417374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf62f745c8983f%3A0x6bfd6cb31e690da0!2sSpringfield%2C%20MO!5e0!3m2!1sen!2sus!4v1715024798240!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            
 
-        <!-- Social Media Links -->
-        <div class="Socials">
-            <ul class="icons">
-                <li><a href="https://g.co/kgs/ecPWnfr"><i class="fa-brands fa-google"></i></a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=61554803909423&mibextid=kFxxJD"><i class="fa-brands fa-square-facebook"></i></a></li>
-            </ul>
-        </div>
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p>If you have any questions or would like to inquire about our services, please feel free to reach out. We'd love to hear from you!</p>
 
-        <!-- Contact Information -->
-        <div class="contactL">
-            <ul>
-                <li>
-                    <p>Email: <a href="mailto:MusilMowing@Gmail.com">MusilMowing@Gmail.com</a></p>
-                </li>
-                <li>
-                    <p>Call Us At: <a href="tel:+14175019697">(417)-501-9697</a></p>
-                </li>
-            </ul>
-        </div>
+                <!-- Contact Information -->
+                <h3>Our Contact Information:</h3>
+                <p><strong>Email:</strong> info@musilmowing.com</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 1234 Lawn Care St, Springfield, MO 65804</p>
+
+                <!-- Contact Form -->
+                <h3>Send us a Message:</h3>
+                <form class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
 
         <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 Musil Mowing. All Rights Reserved.</p>
+        <footer class="footer">
+            <p>&copy; 2024 Musil Mowing. All rights reserved.</p>
         </footer>
     </div>
 </body>

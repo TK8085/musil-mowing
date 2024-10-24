@@ -1,8 +1,8 @@
 :root {
-  --primary: #ddd;
+  --light: #f9f9f9;
   --dark: #333;
-  --light: #fff;
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --primary: white;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -49,6 +49,7 @@ img {
   list-style: none;
   padding: 0;
   grid-template-columns: repeat(4, 1fr);
+  
 }
 
 .main-nav a:hover {
@@ -58,7 +59,7 @@ img {
 }
 
 .main-nav a {
-  background-color: var(--primary);
+  background-color: #dddddd;
   display: block;
   padding: 0.8rem;
   text-align: center;

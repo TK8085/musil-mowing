@@ -9,6 +9,72 @@
     <script src="https://kit.fontawesome.com/f5851cfa09.js" crossorigin="anonymous"></script>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        /* Info Section Styling */
+        .info {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            background-color: var(--light);
+            gap: 2rem;
+        }
+
+        .info img {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info div {
+            flex: 1;
+            padding: 0 1.5rem;
+        }
+
+        .info h2 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .info p {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Button Styling */
+
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info img {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .info div {
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +100,7 @@
                 <h1>Be Ready For A Great Lawn</h1>
                 <p>Get set for lawn perfection! Our team's on a mission to turn your yard into a green paradise. Buckle
                     up for a journey of vibrant landscapes and happy mows!</p>
-                <a href="#" class="btn">Read More</a>
+                <a href="About.html" class="btn">Read More</a>
             </header>
 
             <!-- Price boxes -->
@@ -90,7 +156,7 @@
                     time. Whether it's regular maintenance or a one-time cleanup, we offer flexible service plans to
                     suit your schedule. Transform your lawn with our professional touch – contact us today to get
                     started!</p>
-                <a href="#" class="btn">Learn More</a>
+                <a href="services.html" class="btn">Learn More</a>
             </div>
         </section>
 
